@@ -14,7 +14,7 @@ application as a Python package.
 The structure of this repository is the common structure that is employed with creating 
 a Python package. This structure involves an app folder containing the main python 
 script which in this case is called `app.py`. It is also required that the app folder
-contains a `__init__.py` script (why).
+contains a `__init__.py` script.
 
 Next, we will add the `setup.py` script which enables the creation of your Python 
 package. The `setup.py` script will have the following general shape:
@@ -58,7 +58,8 @@ is defined as the README.md associated with the package repository. A url to the
 repository associated with the Python package can also be supplied. Interestingly, the 
 find_packages() function automatically identifies all packages and sub-packages used 
 by your package. The install_requires argument defines any additional packages that 
-are required for the build of your package. Finally, the required minimum version of Python can also be defined. 
+are required for the build of your package. Finally, the required minimum version 
+of Python can also be defined. 
 
 If uploading your package to pip then it is important to include a LICENSE file to 
 define how your package can be used.  
@@ -68,9 +69,11 @@ Is is recommended that you create a virtual environment for the development of t
 Python package. Do so using your favorite virtual environment tool. 
 
 After the creation and activation of your virtual environment install wheel using:
-`pip install wheel'.
+
+`pip install wheel`.
 
 Now install your package locally using the command:
+
 `pip install .`
 
 Use the `pip freeze` command to confirm that your package has been installed. In 
@@ -106,7 +109,11 @@ response
 It might occur that the package you created needs to be updated on a regular basis.
 It can be a pain to constantly upgrade your package manually. It is possible to 
 enable the package to update automatically once changes have been made to its code 
-base. The command `pip install -e /path/to/repo` overwrites the directory in the 
+base. The command: 
+
+`pip install -e /path/to/repo` 
+
+overwrites the directory in the 
 site-packages with a symbolic link to the package you wish to make changes to. Thus,
 any changes made to this package will be automatically added and identified. The
 symbolic link looks at the current files in the directory, meaning you can switch 
