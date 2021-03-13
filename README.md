@@ -110,7 +110,11 @@ It can be a pain to constantly upgrade your package manually. In this case it is
 possible to enable the package to update automatically once changes have been made 
 to its code base. 
 
-The command `pip install -e /path/to/repo` overwrites the directory in the site-packages
+The command: 
+
+`pip install -e /path/to/repo` 
+
+overwrites the directory in the site-packages
 with a symbolic link to the package you wish to make changes to. Thus, any changes 
 made to this package will be automatically added and identified. The symbolic link looks
 at the current files in the directory, meaning you can switch branches to see changes or 
