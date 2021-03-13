@@ -7,14 +7,14 @@ functions together for use within another repository or in a Jupyter Notebook. T
 are many reasons why you might wish to create a Python package.  
 
 In this repository I will explore how to create a simple Python package. I will create
-a Python package of the Flask application which was defined previously in my 
+a Python package of the Flask application which was defined previously in the 
 `docker_flask_app` repository. 
  
 ### Creating a Python Package
 The structure of this repository is a common structure that is employed with creating 
-a Python package. This structure involves an flask_application folder containing the 
+a Python package. This structure involves a `flask_application` folder containing the 
 main python script which in this case is called `flask_application.py`. It is also 
-required that the flask_application folder contains a `__init__.py` script.
+required that the `flask_application` folder contains a `__init__.py` script.
 
 Next, we will add the `setup.py` script which enables the creation of your Python 
 package. The `setup.py` script will have the following general format:
@@ -69,12 +69,12 @@ After the creation and activation of a virtual environment, install wheel using 
 
 `pip install wheel`
 
-Now install your Python package locally using the command from the root of your repository:
+Now install your Python package locally using the following command from the root of your repository:
 
 `pip install .`
 
 Use the `pip freeze` command to confirm that the Python package has been installed. In 
-this case the package name will be defined as the name defined in the setup.py script. 
+this case the name of your Python package will be the name defined in the setup.py script. 
 
 ### Use your package locally
 In this section we will explore how to use your Python package locally within a 
@@ -88,8 +88,8 @@ import json
 
 It is important to note that in this case the flask_application is named differently 
 than the installed package name. Also in this case the we are installing the app Flask 
-class instance contained in the flask_application.py script within the 
-flask_application folder. Finally, for completeness the command listed below demonstrates 
+class instance contained in the `flask_application.py` script within the 
+`flask_application` folder. Finally, for completeness the command listed below demonstrates 
 how to use the imported Flask app. 
 
 ```
@@ -110,15 +110,12 @@ It can be a pain to constantly upgrade your package manually. In this case it is
 possible to enable the package to update automatically once changes have been made 
 to its code base. 
 
-The command 
-
-`pip install -e /path/to/repo` 
-
-overwrites the directory in the site-packages with a symbolic link to the package 
-you wish to make changes to. Thus, any changes made to this package will be 
-automatically added and identified. The symbolic link looks at the current files 
-in the directory, meaning you can switch branches to see changes or try different 
-things. This is a much nicer and simpler method than repeatedly reinstalling the package.
+The command `pip install -e /path/to/repo` overwrites the directory in the site-packages
+with a symbolic link to the package you wish to make changes to. Thus, any changes 
+made to this package will be automatically added and identified. The symbolic link looks
+at the current files in the directory, meaning you can switch branches to see changes or 
+try different things. This is a much nicer and simpler method than repeatedly 
+reinstalling the package.
 
 ### Conclusion
 This repository contains all the details required to create, install and use locally 
