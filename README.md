@@ -12,9 +12,9 @@ a Python package of the Flask application which was defined previously in my
  
 ### Creating a Python Package
 The structure of this repository is a common structure that is employed with creating 
-a Python package. This structure involves an app folder containing the main python 
-script which in this case is called `app.py`. It is also required that the app folder
-contains a `__init__.py` script.
+a Python package. This structure involves an flask_application folder containing the 
+main python script which in this case is called `flask_application.py`. It is also 
+required that the flask_application folder contains a `__init__.py` script.
 
 Next, we will add the `setup.py` script which enables the creation of your Python 
 package. The `setup.py` script will have the following general format:
@@ -69,7 +69,7 @@ After the creation and activation of a virtual environment, install wheel using 
 
 `pip install wheel`
 
-Now install your Python package locally using the command:
+Now install your Python package locally using the command from the root of your repository:
 
 `pip install .`
 
@@ -82,14 +82,15 @@ Jupyter Notebook. In a Jupyter notebook use the following commands to import you
 package:
 ```
 # import my flask app and the json library
-from app.app import app
+from flask_application.flask_application import app
 import json
 ```
 
-It is important to note that in this case the app is named differently than the 
-installed package name. Also in this case the we are installing the app Flask class 
-instance contained in the app.py script within the app folder. Finally, for 
-completeness the command listed below demonstrates how to use the imported Flask app. 
+It is important to note that in this case the flask_application is named differently 
+than the installed package name. Also in this case the we are installing the app Flask 
+class instance contained in the flask_application.py script within the 
+flask_application folder. Finally, for completeness the command listed below demonstrates 
+how to use the imported Flask app. 
 
 ```
 # POST a request containing a list of numbers to my flask app 
